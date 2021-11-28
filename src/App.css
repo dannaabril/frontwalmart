@@ -1,0 +1,265 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+h3{
+color: rgb(107, 171, 255);
+text-align: center;
+}
+
+h6{
+  text-align: center;
+}
+
+.Cajageneral{
+  padding: 3rem 1.5rem;
+  font-family: "Muli",sans-serif;
+  background-color: #F1F4F9;
+
+}
+
+
+
+
+.btnguardar{
+
+  border-radius: 25px;
+  background-color: rgb(122, 194, 58);
+  border: 1px solid #7AC23A;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 3mm 2cm;
+  margin-left: 60px;
+  color: #fff;
+}
+
+.btncancelar{
+  border: 1px solid rgb(247, 39, 78);
+  background-color:rgb(247, 39, 78);
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 3mm 2cm;
+  color: #fff;
+  margin: 10px;
+  
+}
+
+
+
+
+.formulario{
+  margin-left: 3cm;
+  border-radius: 12px;
+  background-color:#fff;
+  border-bottom: 1px solid #C1C3C7;
+  padding: 2rem;
+  width: 30cm;
+ 
+}
+
+.ctexto{
+  display:inline-block ;
+  align-content:space-between ;
+  margin-bottom: 20px;
+}
+
+.CajatxtL{
+
+margin-bottom: 4px;  
+margin: 4px;
+border-color: rgba(129, 125, 125, 0.281);
+border-radius: 8px;
+
+}
+
+.CajatxtM{
+
+  margin-bottom: 4px;  
+  margin: 4px;
+  border-color: rgba(129, 125, 125, 0.281);
+  border-radius: 8px;
+ 
+  }
+
+  label{
+    color:rgb(119, 118, 119)
+
+  }
+
+  .botones{
+
+      display: inline-block;
+      align-content: space-around;
+      margin: 2cm;
+  }
+
+  .encabezado{
+
+    display:inline-block;
+    align-content: space-around;
+    margin-left: 5cm;
+
+
+  }
+
+  .btngeneral{
+    border: 1px solid rgb(14, 138, 209);
+    background-color:rgb(14, 138, 209);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 3mm 2cm;
+    color: #fff;
+    margin: 10px;
+
+  }
+
+
+  .tablag{
+    table-layout: fixed;
+    align-content: center;
+    margin: 1cm;
+    width: 90%;
+    border-collapse: collapse;
+    border: 2px solid rgba(58, 61, 63, 0.349);
+  }
+
+  .btnMultiple{
+    border: 1px solid rgb(230, 232, 233);
+    background-color:rgb(1, 44, 68);
+    font-size: 14px;
+    text-decoration: none;
+    padding: 2mm ;
+    color: #fff;
+  }
+
+  @font-face{
+    font-family: 'Raleway' ;
+    font-style: normal;
+    font-weight: 200;
+    src: local('Ralewa ExtraLight')
+
+
+  }
+
+
+
+  .body{
+    font-family: 'Raleway', sans-serif;
+  }
+
+
+  .menu{
+    list-style: none;
+    line-height: 42px;
+    margin: 2em auto;
+    padding-left: 0;
+    width: 15em;
+
+  }
+
+  .menu a{
+
+    background: #282c34;
+    color: #ddd;
+    display: block;
+    padding-left: 3em;
+    text-decoration:none;
+    text-transform: uppercase;
+    --webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    width: 100%;
+    
+  }
+
+
+.menu a:hover{
+margin-left: 1em;
+}
+
+
+.menu li{
+  box-shadow: 3px 0 rgba(194, 8, 8, 0.2);
+  margin-bottom: 5px;
+  padding-left: .8em;
+  --webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+
+.menu li:hover{
+  box-shadow: 15em 0 rgba(139, 119, 6, 0.788) inset ;
+}
+
+.menu li:nth-child(2) a{
+  background-position: 0 -42px;
+}
+
+.menu li:nth-child(3) a{
+  background-position: 0 -84px;
+}
+
+.menu li:nth-child(4) a{
+  background-position: 0 -126px;
+}
+
+.menu li:nth-child(5) a{
+  background-position: 0 -168px;
+}
+
+.menu li:nth-child a{
+  background-position: 0 -210px;
+}
+
+
+nav{
+  position: absolute;
+  left: -18em;
+  z-index: 20;
+}
+
+nav.mostrar{
+  left: 0;
+
+}
