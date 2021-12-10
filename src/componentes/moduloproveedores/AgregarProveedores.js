@@ -3,34 +3,39 @@ import { Navigate } from "react-router";
 import axios from "axios";
 
 class AgregarProveedores extends Component{
+    path = null
+    url = [];
+    proveedorId= null
     nit = React.createRef();
     proveedor= React.createRef();
     direccion_proveedor = React.createRef();
     ciudad_proveedor = React.createRef();
     telefono_proveedor = React.createRef();
     email_proveedor = React.createRef();
-state = {
-        proveedores:[],
+    
+    state = {
+        proveedor:[],
         status:null
     }
-guardarProveedor = (e) => {
-    e.preventDefault();
-        var proveedor = {
-            id:this.nit.current.value,
-            nombredelproveedor:this.proveedor.current.value,
-            direccion:this.direccion_proveedor.current.value,
-            ciudad:this.ciudad_proveedor.current.value,
-            telefono:this.telefono_proveedor.current.value,
-            email:this.email_proveedor.current.value,
-        }
+
+    guardarProveedor = (e) => {
+        e.preventDefault();
+            var proveedor = {
+                id:this.nit.current.value,
+                nombredelproveedor:this.proveedor.current.value,
+                direccion:this.direccion_proveedor.current.value,
+                ciudad:this.ciudad_proveedor.current.value,
+                telefono:this.telefono_proveedor.current.value,
+                email:this.email_proveedor.current.value,
+            }
 
 
 
 
-axios.post("http://localhost:8080/api/v1/guardarProveedor",proveedor)
-            .then(res=>{
-                this.setState({
-                    status:"success"
+    axios.post("http://localhost:8080/api/v1/guardarProveedor",proveedor)
+        .then(res=>{
+            this.setState({
+                status:"success"
                 })
             });
         }
@@ -40,14 +45,14 @@ axios.post("http://localhost:8080/api/v1/guardarProveedor",proveedor)
                 return <Navigate to ="/Proveedores" />
         }
     
-    
+
 
         return(
             <div class= "Cajageneral">
                 <h3>Agregar Proveedor </h3>
                 <h6 class="campos"> Todos los campos marcados con * son obligatorios para la creación del tercero </h6>
                 
-                <form class="formulario">
+                <form class="formulario" onSubmit = {this.guardarProveedor}>
                     
                         <div class="ctexto">
                             <label>NIT Proveedor</label>
@@ -83,7 +88,7 @@ axios.post("http://localhost:8080/api/v1/guardarProveedor",proveedor)
 
                     
                         <div class="botones">
-                            <button onSubmit = {this.guardarProveedor} class= "btnguardar"> Guardar </button>
+                            <input class= "btnguardar" type = "submit" />
                             <a href="/Proveedores"  class= "btncancelar"> Cancelar </a>
                         </div>
                     
