@@ -14,7 +14,7 @@
 
 .loginfor {
   display: contents;
-  }
+}
 
 .App-logo {
   height: 40vmin;
@@ -384,12 +384,22 @@ nav.mostrar {
   color: white;
 }
 
+.contentVentas-main {
+  padding-left: 100px;
+}
+
 .contentVentas-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin-top: 30px;
+}
+
+.contentVentas-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 #mostrarmenu {
@@ -408,17 +418,15 @@ th {
   color: white;
 }
 
-.login-username, .login-password {
+.login-username,
+.login-password {
   background: transparent;
   border: 1 solid;
-  border-bottom: 1px solid rgba(white, .5);
+  border-bottom: 1px solid rgba(white, 0.5);
   color: rgba(108, 142, 153, 0.459);
   display: block;
   margin: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   transition: 250ms background ease-in;
   width: calc(100% - 3rem);
-  
 }
-
-

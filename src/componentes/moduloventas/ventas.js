@@ -7,7 +7,7 @@ class Ventas extends Component {
     // this.getId = this.getId.bind(this);
     this.idRef = React.createRef();
     this.state = {
-      clientes: [],
+      clientes: "",
       id: "",
     };
   }
@@ -16,7 +16,7 @@ class Ventas extends Component {
 
   getClientes = () => {
     axios
-      .get("http://localhost:8080/api/v1/mostrarProveedor/" + this.state.id)
+      .get("http://localhost:8080/api/v1/mostrarCliente/" + this.state.id)
       .then((res) => {
         this.setState({
           clientes: res.data,
@@ -32,9 +32,13 @@ class Ventas extends Component {
     console.log(this.state.id);
   };
 
+  // mostrarCliente = () => {
+  //     this.state.clientes.map(item => )
+  // };
+
   render() {
     return (
-      <div>
+      <div className="contentVentas-main">
         <div className="contentVentas-1">
           <span>Cedula: </span>
           <input
@@ -44,9 +48,27 @@ class Ventas extends Component {
           />
           <input type="button" value="consultar" onClick={this.getClientes} />
           <span>Cliente: </span>
-          <input type="text" value={this.state.clientes.nombre_producto} />
+          <input
+            type="text"
+            value={this.state.clientes.nombrescliente}
+            disabled
+          />
           <span>Consec: </span>
-          <input type="text" />
+          <input type="text" value={this.state.clientes.id} disabled />
+        </div>
+        <div className="contentVentas-2">
+          <h2>Cod. Producto</h2>
+          <h2>Nombre Producto</h2>
+          <h2>Cantidad</h2>
+          <h2>Valor Total</h2>
+        </div>
+        <div className="contentVentas-3">
+          <div className="subContentVentas-3">
+            <div className="sectionConstentVentas-3">
+              <input type="text" />
+              <input type="button" value="consultar" />
+            </div>
+          </div>
         </div>
       </div>
     );
