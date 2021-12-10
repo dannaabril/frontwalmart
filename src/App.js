@@ -1,18 +1,13 @@
-
-import './App.css';
-import Login from './Login';
+import "./App.css";
+import Login from "./Login";
 
 function App() {
-
-  
   return (
-  
-  <div className="App">
+    <div className="App">
+      <Router />
+      {/* <Login /> */}
+    </div>
+  );
+}
 
-  
-     <Login />
-
-  </div>)
-} 
-    
 export default App;

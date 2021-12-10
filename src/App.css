@@ -1,6 +1,4 @@
-
-
-.login{
+.login {
   background: url(.//Img/Fondo.PNG);
   width: 18.32cm;
   height: 16.5cm;
@@ -9,13 +7,14 @@
   border-radius: 5px;
   position: absolute;
 }
+.formu {
+  margin-left: 2cm;
+  width: 10cm;
+}
 
-
-.loginfor{
-
+.loginfor {
   display: contents;
   }
-
 
 .App-logo {
   height: 40vmin;
@@ -28,10 +27,9 @@
   }
 }
 
-
-.principal{
-  font-family: "Muli",sans-serif;
-  background-color: #F1F4F9;
+.principal {
+  font-family: "Muli", sans-serif;
+  background-color: #f1f4f9;
   height: 15cm;
 }
 
@@ -43,8 +41,8 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  
-  margin-left:6.08cm ;
+
+  margin-left: 6.08cm;
 }
 
 .App-link {
@@ -60,43 +58,34 @@
   }
 }
 
-h1{
-
+h1 {
   margin-left: 47mm;
   color: rgb(80, 144, 226);
 }
 
-
-h3{
-color: rgb(107, 171, 255);
-text-align: center;
-margin-left: 5cm;
-}
-
-h6{
+h3 {
+  color: rgb(107, 171, 255);
   text-align: center;
   margin-left: 5cm;
-  
 }
 
-.Cajageneral{
- 
+h6 {
+  text-align: center;
+  margin-left: 5cm;
+}
+
+.Cajageneral {
   padding: 0.4cm 1.5rem;
-  font-family: "Muli",sans-serif;
+  font-family: "Muli", sans-serif;
   font-size: 6mm;
-  background-color: #F1F4F9;
+  background-color: #f1f4f9;
   height: 14cm;
-
 }
 
-
-
-
-.btnguardar{
-
+.btnguardar {
   border-radius: 25px;
   background-color: rgb(122, 194, 58);
-  border: 1px solid #7AC23A;
+  border: 1px solid #7ac23a;
   font-weight: bold;
   font-size: 14px;
   padding: 3mm 2cm;
@@ -105,9 +94,9 @@ h6{
   color: #fff;
 }
 
-.btncancelar{
+.btncancelar {
   border: 1px solid rgb(247, 39, 78);
-  background-color:rgb(247, 39, 78);
+  background-color: rgb(247, 39, 78);
   border-radius: 25px;
   font-weight: bold;
   font-size: 14px;
@@ -115,252 +104,308 @@ h6{
   padding: 3mm 2cm;
   color: #fff;
   margin: 10px;
-  margin-bottom: 0.5cm;
 }
 
-
-
-
-.formulario{
+.formulario {
   margin-left: 6cm;
   font-size: 5mm;
   border-radius: 12px;
-  background-color:#fff;
-  border-bottom: 1px solid #C1C3C7;
+  background-color: #fff;
+  border-bottom: 1px solid #c1c3c7;
   padding: 1rem;
   width: 28cm;
   height: 8cm;
   margin-top: 1cm;
-
- 
 }
 
-.ctexto{
-  display:inline-block ;
-  align-content:space-between ;
+.ctexto {
+  display: inline-block;
+  align-content: space-between;
   margin-bottom: 20px;
 }
 
-.CajatxtL{
-
-margin-bottom: 4px;  
-margin: 4px;
-border-color: rgba(129, 125, 125, 0.281);
-border-radius: 8px;
-height: 0.6cm;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 15px;
-color: gray;
-
-}
-
-.CajatxtM{
-
-  margin-bottom: 4px;  
+.CajatxtL {
+  margin-bottom: 4px;
   margin: 4px;
   border-color: rgba(129, 125, 125, 0.281);
   border-radius: 8px;
   height: 0.6cm;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
   color: gray;
-  }
+}
 
-  label{
-    color:rgb(119, 118, 119)
+.CajatxtM {
+  margin-bottom: 4px;
+  margin: 4px;
+  border-color: rgba(129, 125, 125, 0.281);
+  border-radius: 8px;
+  height: 0.6cm;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: gray;
+}
 
-  }
+label {
+  color: rgb(119, 118, 119);
+}
 
-  .botones{
+.botones {
+  display: inline-block;
+  align-content: space-around;
+  margin: 2cm;
+}
 
-      display: inline-block;
-      align-content: space-around;
-      margin: 2cm;
-  }
+.encabezado {
+  display: inline-block;
+  align-content: space-around;
+  margin: 1cm;
+  font-family: "Muli", sans-serif;
+}
 
-  .encabezado{
+.btngeneral {
+  border: 1px solid rgb(5, 76, 117);
+  background-color: rgb(4, 94, 110);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 3mm 1cm;
+  color: #fff;
+  margin: 10px;
+  margin-left: 5cm;
+}
 
-    display:inline-block;
-    align-content: space-around;
-    margin: 1cm;
-    font-family: "Muli",sans-serif;
-    
+.tablag {
+  table-layout: fixed;
+  align-content: center;
+  margin-left: 6.6cm;
+  width: 80%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background-color: white;
+  color: #68696b;
+  border: 2px solid rgb(200, 204, 207);
+}
 
+.btnMultiple2 {
+  border: 1px solid rgb(230, 232, 233);
+  border-radius: 4px;
+  background-color: rgb(247, 39, 78);
+  font-size: 14px;
+  text-decoration: none;
+  padding: 2mm;
+  color: #fff;
+}
 
-  }
+.btnMultiple1 {
+  border: 1px solid rgb(230, 232, 233);
+  border-radius: 4px;
+  background-color: rgb(122, 194, 58);
+  font-size: 14px;
+  text-decoration: none;
+  padding: 2mm;
+  color: #fff;
+}
 
-  .btngeneral{
-    border: 1px solid rgb(5, 76, 117);
-    background-color:rgb(4, 94, 110);
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-    padding: 3mm 1cm;
-    color: #fff;
-    margin: 10px;
-    margin-left: 5cm;
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Ralewa ExtraLight");
+}
 
-  }
+label {
+  color: rgb(119, 118, 119);
+}
 
-  
-  .tablag{
-    table-layout: fixed;
-    align-content: center;
-    margin-left: 6.6cm;
-    width: 80%;
-    border-collapse: collapse;
-    font-size: 13px;
-    background-color: white;
-    color: #68696b;
-    border: 2px solid rgb(200, 204, 207);
-  }
+.botones {
+  display: inline-block;
+  align-content: space-around;
+  margin: 2cm;
+}
 
-  .btnMultiple2{
-    border: 1px solid rgb(230, 232, 233);
-    border-radius: 4px;
-    background-color:rgb(247, 39, 78);
-    font-size: 14px;
-    text-decoration: none;
-    padding: 2mm ;
-    color: #fff;
-  }
+.encabezado {
+  display: inline-block;
+  align-content: space-around;
+  margin-left: 5cm;
+}
 
+.btngeneral {
+  border: 1px solid rgb(14, 138, 209);
+  background-color: rgb(14, 138, 209);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 3mm 2cm;
+  color: #fff;
+  margin: 10px;
+}
 
-  .btnMultiple1{
-    border: 1px solid rgb(230, 232, 233);
-    border-radius: 4px;
-    background-color:rgb(122, 194, 58);
-    font-size: 14px;
-    text-decoration: none;
-    padding: 2mm ;
-    color: #fff;
-  }
+.body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+}
 
-  @font-face{
-    font-family: 'Raleway' ;
-    font-style: normal;
-    font-weight: 200;
-    src: local('Ralewa ExtraLight')
+.tablag {
+  table-layout: fixed;
+  align-content: center;
+  margin: 1cm;
+  width: 90%;
+  border-collapse: collapse;
+  border: 2px solid rgba(58, 61, 63, 0.349);
+}
 
+.btnMultiple {
+  border: 1px solid rgb(230, 232, 233);
+  background-color: rgb(1, 44, 68);
+  font-size: 14px;
+  text-decoration: none;
+  padding: 2mm;
+  color: #fff;
+}
 
-  }
+.menu {
+  list-style: none;
+  line-height: 42px;
+  margin: 2em auto;
+  padding-left: 0;
+  width: 15em;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Ralewa ExtraLight");
+}
 
+.menu a {
+  color: rgb(242, 245, 247);
+  display: block;
+  padding-left: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  --webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+  margin-bottom: 0.8cm;
+}
 
-  .body{
-    background-color: rgb(255, 255, 255);
-    font-family: 'Raleway', sans-serif;
-  }
+.menu {
+  list-style: none;
+  line-height: 42px;
+  margin: 2em auto;
+  padding-left: 0;
+  width: 15em;
+}
 
+.menu a {
+  background: #282c34;
+  color: #ddd;
+  display: block;
+  padding-left: 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  --webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+}
 
-  .menu{
-    list-style: none;
-    line-height: 42px;
-    margin: 2em auto;
-    padding-left: 0;
-    width: 15em;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  }
-
-  .menu a{
-
-    color: rgb(242, 245, 247);
-    display: block;
-    padding-left: 1em;
-    text-decoration:none;
-    text-transform: uppercase;
-    --webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    width: 100%;
-    margin-bottom: .8cm;
-    
-    
-  }
-
-
-.menu a:hover{
+.menu a:hover {
   margin-left: 1em;
 }
 
+.menu a:hover {
+  margin-left: 1em;
+}
 
-.menu li{
+.menu li {
   box-shadow: 4px 0 rgb(80, 94, 112);
   margin-bottom: 5px;
-  padding-left: .8em;
-  --webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
+  padding-left: 0.8em;
+  --webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-
-.menu li:hover{
+.menu li:hover {
   box-shadow: -15em 0 rgba(216, 141, 28, 0.2) inset;
-  
-
 }
 
-.menu li:nth-child(2) a{
+.menu li:nth-child(2) a {
   background-position: 0 -42px;
 }
 
-.menu li:nth-child(3) a{
+.menu li:nth-child(3) a {
   background-position: 0 -84px;
 }
 
-.menu li:nth-child(4) a{
+.menu li:nth-child(4) a {
   background-position: 0 -126px;
 }
 
-.menu li:nth-child(5) a{
+.menu li:nth-child(5) a {
   background-position: 0 -168px;
 }
 
-.menu li:last-child a{
+.menu li:nth-child a {
   background-position: 0 -210px;
 }
 
+.menu li:last-child a {
+  background-position: 0 -210px;
+}
 
-
-
-nav{
+nav {
   background: rgb(8, 21, 29);
   padding-right: 0.25em;
   padding-top: 0.3cm;
   position: absolute;
   left: -18em;
-  top:0;
+  top: 0;
   z-index: 20;
   height: 100%;
 }
 
-nav.mostrar{
+nav.mostrar {
   left: 0;
-
 }
 
-#mostrarmenu{
+/*Estilos Módulo de Ventas*/
+
+.container-ventas p {
+  font-size: 25px;
+  color: white;
+}
+
+.contentVentas-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#mostrarmenu {
   background: url(.//Img/LogoWalMart2.png);
   cursor: pointer;
   background-size: 5cm;
-  margin-left: 1cm;;
+  margin-left: 1cm;
   height: 4cm;
   width: 5cm;
   z-index: 100;
-
-
 }
 
-th{
-
-  background-color:rgb(52, 61, 73);
+th {
+  background-color: rgb(52, 61, 73);
   height: 1cm;
   color: white;
-
-
 }
 
 .login-username, .login-password {
@@ -375,4 +420,5 @@ th{
   width: calc(100% - 3rem);
   
 }
+
 
