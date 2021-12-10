@@ -51,22 +51,22 @@ class Login extends Component{
             
             <div className="formu">
             
-                <h4>Login</h4>
+                <h4>DATOS DE INGRESO TIENDA WALMART</h4>
                         
 
                         <form onSubmit= {this.enviologin}> 
                             <div>
-                                <label>Nombre</label>
+                                <label className="label">Nombre de Usuario</label>
                                 <input  required="required" class="login-username" type = "text" name = "nombres" ref={this.nombres}/>
                             </div>
                             <div>
-                                <label>Contraseña</label>
-                                <input type = "password" class="login-password" name = "clave" ref={this.clave} />
+                                <label className="label">Contraseña</label>
+                                <input type = "password" required="required" class="login-password" name = "clave" ref={this.clave} />
                             </div>
                             
                             <div>
-                                <input  type = "submit" />
-                                <a href="/Login"> Cancelar </a>
+                                <input  className="btngeneral"type = "submit" />
+                                <a href="/Login" className="btngeneral"> Cancelar </a>
                             </div>
                         </form>
             </div>

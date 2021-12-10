@@ -4,16 +4,16 @@
   height: 16.5cm;
   top: -0px;
   margin-left: 17.8cm;
-  border-radius: 5px;
   position: absolute;
-}
-.formu {
-  margin-left: 2cm;
-  width: 10cm;
 }
 
 .loginfor {
   display: contents;
+  margin-left: 2cm;
+}
+
+.formu {
+  align-content: center;
 }
 
 .App-logo {
@@ -31,6 +31,7 @@
   font-family: "Muli", sans-serif;
   background-color: #f1f4f9;
   height: 15cm;
+  margin-left: 1cm;
 }
 
 .App-header {
@@ -104,6 +105,7 @@ h6 {
   padding: 3mm 2cm;
   color: #fff;
   margin: 10px;
+  margin-bottom: 0.5cm;
 }
 
 .formulario {
@@ -173,7 +175,7 @@ label {
   padding: 3mm 1cm;
   color: #fff;
   margin: 10px;
-  margin-left: 5cm;
+  margin-left: 3cm;
 }
 
 .tablag {
@@ -215,55 +217,9 @@ label {
   src: local("Ralewa ExtraLight");
 }
 
-label {
-  color: rgb(119, 118, 119);
-}
-
-.botones {
-  display: inline-block;
-  align-content: space-around;
-  margin: 2cm;
-}
-
-.encabezado {
-  display: inline-block;
-  align-content: space-around;
-  margin-left: 5cm;
-}
-
-.btngeneral {
-  border: 1px solid rgb(14, 138, 209);
-  background-color: rgb(14, 138, 209);
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 14px;
-  text-decoration: none;
-  padding: 3mm 2cm;
-  color: #fff;
-  margin: 10px;
-}
-
 .body {
   background-color: rgb(255, 255, 255);
   font-family: "Raleway", sans-serif;
-}
-
-.tablag {
-  table-layout: fixed;
-  align-content: center;
-  margin: 1cm;
-  width: 90%;
-  border-collapse: collapse;
-  border: 2px solid rgba(58, 61, 63, 0.349);
-}
-
-.btnMultiple {
-  border: 1px solid rgb(230, 232, 233);
-  background-color: rgb(1, 44, 68);
-  font-size: 14px;
-  text-decoration: none;
-  padding: 2mm;
-  color: #fff;
 }
 
 .menu {
@@ -274,13 +230,6 @@ label {
   width: 15em;
   font-size: 15px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 200;
-  src: local("Ralewa ExtraLight");
 }
 
 .menu a {
@@ -294,31 +243,6 @@ label {
   transition: all 0.5s;
   width: 100%;
   margin-bottom: 0.8cm;
-}
-
-.menu {
-  list-style: none;
-  line-height: 42px;
-  margin: 2em auto;
-  padding-left: 0;
-  width: 15em;
-}
-
-.menu a {
-  background: #282c34;
-  color: #ddd;
-  display: block;
-  padding-left: 3em;
-  text-decoration: none;
-  text-transform: uppercase;
-  --webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  width: 100%;
-}
-
-.menu a:hover {
-  margin-left: 1em;
 }
 
 .menu a:hover {
@@ -354,10 +278,6 @@ label {
   background-position: 0 -168px;
 }
 
-.menu li:nth-child a {
-  background-position: 0 -210px;
-}
-
 .menu li:last-child a {
   background-position: 0 -210px;
 }
@@ -375,13 +295,6 @@ nav {
 
 nav.mostrar {
   left: 0;
-}
-
-/*Estilos Módulo de Ventas*/
-
-.container-ventas p {
-  font-size: 25px;
-  color: white;
 }
 
 .contentVentas-main {
@@ -426,7 +339,32 @@ th {
   color: rgba(108, 142, 153, 0.459);
   display: block;
   margin: 1rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 15px;
   transition: 250ms background ease-in;
-  width: calc(100% - 3rem);
+  width: 12cm;
+  margin-left: 2cm;
+}
+
+h4 {
+  margin-left: 2cm;
+  color: darkslategray;
+  font-family: sans-serif;
+  font-size: 26px;
+  margin-top: 3cm;
+}
+
+.contentVentas-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 6cm;
+}
+
+.label {
+  color: darkcyan;
+  margin-left: 2cm;
+  font-size: 20px;
 }
