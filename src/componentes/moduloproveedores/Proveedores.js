@@ -47,7 +47,7 @@ class Proveedores extends Component{
     
     render(){
         return(
-            <div>
+            <div class="principal">
                 <div class="encabezado">
                     <h1>Modulo de Proveedores</h1>
                     
@@ -82,8 +82,8 @@ class Proveedores extends Component{
                                         <td>{proveedores.telefono}</td>
                                         <td>{proveedores.email}</td>
                                         <td>
-                                            <Link class="btnMultiple" to = {"/EditarProveedor/"+proveedores.id}>Editar</Link>
-                                            <button class="btnMultiple"onClick ={
+                                            <Link class="btnMultiple1" to = {"/EditarProveedor/"+proveedores.id}>Editar</Link>
+                                            <button class="btnMultiple2"onClick ={
                                                 ()=>{
                                                     this.borrarProveedor(proveedores.id)
                                                 }

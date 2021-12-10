@@ -11,15 +11,27 @@ class Router extends Component{
     render(){
         return(
             <BrowserRouter>
+
+            <body class="body">
                 <header className="App-header">
+                
+                    
                     <nav class="mostrar">
+
+                        <div id="mostrarmenu"></div>
+
                         <ul class="menu">
-                            
-                            <li><a href = "/Proveedores" activeClassName = "active">Proveedores</a></li>
+                        <li> <NavLink to = "" activeClassName = "active"> Usuarios </NavLink></li> 
+                        <li> <NavLink to = "" activeClassName = "active"> Clientes </NavLink></li> 
+                        <li> <NavLink to = "" activeClassName = "active"> Ventas </NavLink></li>   
+                        <li> <NavLink to = "" activeClassName = "active"> Productos </NavLink></li> 
+                        <li> <NavLink to = "/proveedores" activeClassName = "active">Proveedores</NavLink></li>
+                        
                            
                         </ul>
                     </nav>
                 </header>
+            </body>
                 <Routes>
                     
                     <Route path = "/Proveedores" element = {<Proveedores />} />

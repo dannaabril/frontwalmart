@@ -64,22 +64,22 @@ class EditarProveedor extends Component{
             }
             
             return(
-                <div>
+                <div class= "Cajageneral">
                     <h3>Editar Proveedor</h3>
                     <h6 class="campos"> Todos los campos marcados con * son obligatorios para la creación del tercero </h6>
 
                     <form class="formulario" onSubmit = {this.guardarProveedor}>
                         <div class="ctexto">
                             <label>NIT Proveedor</label>
-                            <input class= "CajatxtM" required="required" type = "text" name = "Nit" ref={this.nit} defaultValue={this.state.proveedor.id}/>
+                            <input class= "CajatxtM" disabled="disabled"  required="required" type = "text" name = "Nit" ref={this.nit} defaultValue={this.state.proveedor.id}/>
                         </div>
                         <div class="ctexto">
                             <label>Razon Social</label>
-                            <input class= "CajatxtL" size="70" type = "text" name = "proveedor" ref={this.proveedor} defaultValue={this.state.proveedor.nombredelproveedor}/>
+                            <input class= "CajatxtL" size="65" type = "text" name = "proveedor" ref={this.proveedor} defaultValue={this.state.proveedor.nombredelproveedor}/>
                         </div>
                         <div class="ctexto">
                             <label>Direccion</label>
-                            <input class= "CajatxtL" size="70" type = "text" name = "direccion" ref={this.direccion_proveedor}  defaultValue={this.state.proveedor.direccion}/>
+                            <input class= "CajatxtL" size="65" type = "text" name = "direccion" ref={this.direccion_proveedor}  defaultValue={this.state.proveedor.direccion}/>
                         </div>
                         <div class="ctexto">
                             <label>Ciudad</label>
@@ -91,7 +91,7 @@ class EditarProveedor extends Component{
                         </div>
                         <div class="ctexto">
                             <label>Email</label>
-                            <input class= "CajatxtL" size="70" type = "text" name = "email" ref={this.email_proveedor}  defaultValue={this.state.proveedor.email}/>
+                            <input class= "CajatxtL" size="65" type = "text" name = "email" ref={this.email_proveedor}  defaultValue={this.state.proveedor.email}/>
                         </div>
                         <div>
                             <input class= "btnguardar" type = "submit" />

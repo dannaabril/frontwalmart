@@ -1,25 +1,18 @@
-import logo from './logo.svg';import './App.css';
-import Router from './Router';
 
+import './App.css';
+import Login from './Login';
 
 function App() {
 
-  var nombre = "Hola a Todos"
+  
   return (
-    <div className="App">
-      <header>
+  
+  <div className="App">
 
-     </header>
+  
+     <Login />
 
-     <div>
-        
-        <Router />
-     </div>
-
-
-
-    </div>
-  );
-}
-
+  </div>)
+} 
+    
 export default App;
