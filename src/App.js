@@ -1,23 +1,16 @@
-import logo from './logo.svg';import './App.css';
-import Router from './Router';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Router from "./Router";
 
 function App() {
-
-  var nombre = "Hola a Todos"
+  var nombre = "Hola a Todos";
   return (
     <div className="App">
-      <header>
+      <header></header>
 
-     </header>
-
-     <div>
-        
+      <div>
         <Router />
-     </div>
-
-
-
+      </div>
     </div>
   );
 }
