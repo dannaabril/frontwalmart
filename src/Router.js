@@ -6,6 +6,15 @@ import Proveedores from "./componentes/moduloproveedores/Proveedores";
 import AgregarProveedores from "./componentes/moduloproveedores/AgregarProveedores";
 import EditarProveedor from "./componentes/moduloproveedores/EditarProveedor";
 import Ventas from "./componentes/moduloventas/ventas";
+import Usuarios from "./componentes/moduloUsuarios/Usuarios";
+import AgregarUsuario from "./componentes/moduloUsuarios/AgregarUsuarios";
+import EditarUsuario from "./componentes/moduloUsuarios/EditarUsuario";
+import Productos from "./componentes/moduloProductos/Productos";
+import AgregarProducto from "./componentes/moduloProductos/AgregarProducto";
+import EditarProducto from "./componentes/moduloProductos/EditarProducto";
+import Clientes from "./componentes/moduloClientes/Clientes";
+import AgregarCliente from "./componentes/moduloClientes/AgregarCliente";
+import EditarCliente from "./componentes/moduloClientes/EditarCliente";
 
 class Router extends Component {
   render() {
@@ -19,14 +28,14 @@ class Router extends Component {
               <ul class="menu">
                 <li>
                   {" "}
-                  <NavLink to="" activeClassName="active">
+                  <NavLink to="/Usuarios" activeClassName="active">
                     {" "}
                     Usuarios{" "}
                   </NavLink>
                 </li>
                 <li>
                   {" "}
-                  <NavLink to="" activeClassName="active">
+                  <NavLink to="/Productos" activeClassName="active">
                     {" "}
                     Clientes{" "}
                   </NavLink>
@@ -40,7 +49,7 @@ class Router extends Component {
                 </li>
                 <li>
                   {" "}
-                  <NavLink to="" activeClassName="active">
+                  <NavLink to="/Clientes" activeClassName="active">
                     {" "}
                     Productos{" "}
                   </NavLink>
@@ -56,6 +65,15 @@ class Router extends Component {
           </header>
         </body>
         <Routes>
+          <Route path="/Usuarios" element={<Usuarios />} />
+          <Route path="/AgregarUsuario" element={<AgregarUsuario />} />
+          <Route path="/EditarUsuario/:id" element={<EditarUsuario />} />
+          <Route path="/Productos" element={<Productos />} />
+          <Route path="/AgregarProducto" element={<AgregarProducto />} />
+          <Route path="/EditarProducto/:codigoProducto" element={<EditarProducto />} />
+          <Route path="/Clientes" element={<Clientes />} />
+          <Route path="/AgregarCliente" element={<AgregarCliente />} />
+          <Route path="/EditarCliente/:id" element={<EditarCliente />} />
           <Route path="/Proveedores" element={<Proveedores />} />
           <Route path="/AgregarProveedores" element={<AgregarProveedores />} />
           <Route path="/EditarProveedor/:id" element={<EditarProveedor />} />
