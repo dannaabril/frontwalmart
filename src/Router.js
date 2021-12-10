@@ -13,7 +13,7 @@ class Router extends Component{
             <BrowserRouter>
 
             <body class="body">
-                <header className="App-header">
+          
                 
                     
                     <nav class="mostrar">
@@ -30,10 +30,9 @@ class Router extends Component{
                            
                         </ul>
                     </nav>
-                </header>
+                
             </body>
                 <Routes>
-                    
                     <Route path = "/Proveedores" element = {<Proveedores />} />
                     <Route path = "/AgregarProveedores" element = {<AgregarProveedores/>} />
                     <Route path = "/EditarProveedor/:id" element = {<EditarProveedor/>} />

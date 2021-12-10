@@ -56,7 +56,7 @@ class EditarProveedor extends Component{
                         status:"success"
                     })
                 });
-            }
+    }
         
             render(){
                 if(this.state.status === "success"){

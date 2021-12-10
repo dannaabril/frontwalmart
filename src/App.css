@@ -2,23 +2,19 @@
 
 .login{
   background: url(.//Img/Fondo.PNG);
-  background-size: 20cm 20cm;
-  width: 20cm;
-  height: 20cm;
-  margin-left: 15cm;
-  margin-top: 0%;
-  position: fixed;
+  width: 18.32cm;
+  height: 16.5cm;
+  top: -0px;
+  margin-left: 17.8cm;
+  border-radius: 5px;
+  position: absolute;
 }
 
-.formu{
-  margin-left: 2cm;
-  width: 10cm;
-}
 
 .loginfor{
 
   display: contents;
-}
+  }
 
 
 .App-logo {
@@ -365,5 +361,18 @@ th{
   color: white;
 
 
+}
+
+.login-username, .login-password {
+  background: transparent;
+  border: 1 solid;
+  border-bottom: 1px solid rgba(white, .5);
+  color: rgba(108, 142, 153, 0.459);
+  display: block;
+  margin: 1rem;
+  padding: .5rem;
+  transition: 250ms background ease-in;
+  width: calc(100% - 3rem);
+  
 }
 
