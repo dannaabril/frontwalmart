@@ -28,7 +28,7 @@ class Login extends Component{
 
 
     
-        axios.post("http://localhost:8080/api/v1/login",ingreso)
+            axios.post("http://localhost:8080/api/v1/login",ingreso)
             .then(res =>{
                 this.setState({
                     datoslogin:res.data,
@@ -40,7 +40,7 @@ class Login extends Component{
     }
 
     render(){
-        if(this.state.status === "success"){
+        if(this.state.datoslogin === "EXITOSO"){
             return < Router />
         }
      
