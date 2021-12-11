@@ -22,8 +22,8 @@ class Login extends Component{
     enviologin = (e) => {
         e.preventDefault();
             var ingreso = {
-                nombres:this.nombres.current.value,
-                clave:this.clave.current.value,
+                nombresUsuario:this.nombres.current.value,
+                claveUsuario:this.clave.current.value,
             }
 
 
@@ -57,15 +57,15 @@ class Login extends Component{
                         <form onSubmit= {this.enviologin}> 
                             <div>
                                 <label className="label">Nombre de Usuario</label>
-                                <input  required="required" class="login-username" type = "text" name = "nombres" ref={this.nombres}/>
+                                <input  required="required" class="login-username" type = "text" name = "nombresUsuario" ref={this.nombres}/>
                             </div>
                             <div>
                                 <label className="label">Contraseña</label>
-                                <input type = "password" required="required" class="login-password" name = "clave" ref={this.clave} />
+                                <input type = "password" required="required" class="login-password" name = "claveUsuario" ref={this.clave} />
                             </div>
                             
                             <div>
-                                <input  className="btngeneral"type = "submit" />
+                                <input  className="btngeneral" type = "submit" />
                                 <a href="/Login" className="btngeneral"> Cancelar </a>
                             </div>
                         </form>

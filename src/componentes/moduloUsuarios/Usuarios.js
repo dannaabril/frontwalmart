@@ -47,7 +47,7 @@ class Usuarios extends Component{
     
     render(){
         return(
-            <div>
+            <div class="principal">
                 <div class="encabezado">
                     <h1>Modulo de Usuarios</h1>
                     
@@ -76,21 +76,30 @@ class Usuarios extends Component{
                             return(
                                 <React.Fragment>
                                     <tr>
-                                        <td>{usuario.idUsuario}</td>
-                                        <td>{usuario.nombresUsuario}</td>
-                                        <td>{usuario.apellidosUsuario}</td>
-                                        <td>{usuario.emailUsuario}</td>
-                                        <td>{usuario.cargoUsuario}</td>
-                                        <td>{usuario.claveUsuario}</td>
-                                        <td>{usuario.sedeUsuario}</td>
+                                        <td><center>{usuario.idUsuario}</center></td>
+                                        <td><center>{usuario.nombresUsuario}</center></td>
+                                        <td><center>{usuario.apellidosUsuario}</center></td>
+                                        <td><center>{usuario.emailUsuario}</center></td>
+                                        <td><center>{usuario.cargoUsuario}</center></td>
+                                        <td><center>{usuario.claveUsuario}</center></td>
+                                        <td><center>{usuario.sedeUsuario}</center></td>
                                         <td>
-                                            <Link class="btnMultiple" to = {"/EditarUsuario/"+usuario.idUsuario}>Editar</Link>
-                                            <button class="btnMultiple"onClick ={
-                                                ()=>{
-                                                    this.borrarUsuario(usuario.idUsuario)
-                                                }
-                                            }>
-                                                Eliminar</button>
+                                            <center>
+                                                <Link 
+                                                    class="btnMultiple1" 
+                                                    to = {"/EditarUsuario/"+usuario.idUsuario}
+                                                >
+                                                    Editar
+                                                </Link>
+                                                <button 
+                                                    class="btnMultiple2"
+                                                    onClick ={() => {
+                                                        this.borrarUsuario(usuario.idUsuario)
+                                                    }}
+                                                >
+                                                    Eliminar
+                                                </button>
+                                            </center>
                                         </td>
                                     </tr>
                                 </React.Fragment>
