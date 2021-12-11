@@ -1,5 +1,7 @@
 import React, { Component, createRef, useState } from "react";
 import axios from "axios";
+import { Navigate } from "react-router";
+import swal from "sweetalert2";
 
 class Ventas extends Component {
   constructor(props) {
@@ -7,6 +9,8 @@ class Ventas extends Component {
     // this.getId = this.getId.bind(this);
     this.idRef = React.createRef();
     this.state = {
+      status: "",
+      ventas: "",
       clientes: "",
       productos: "",
       productos2: "",
@@ -18,6 +22,7 @@ class Ventas extends Component {
       cantidad1: "",
       cantidad2: "",
       cantidad3: "",
+      respuesta: "",
     };
   }
 
@@ -133,205 +138,252 @@ class Ventas extends Component {
       });
   };
 
+  guardarVenta = (e) => {
+    e.preventDefault();
+    var venta = {
+      codigo: 112,
+      cedulaCliente: this.state.clientes.id,
+      cedulaUsuario: this.txtCedula.current.value,
+      valorTotalVenta: this.txtTotalVenta.current.value,
+      valorIva: this.txtTotalIva.current.value,
+      valorTotalMasIva: this.txtTotalConIva.current.value,
+    };
+
+    axios
+      .post("http://localhost:8080/api/v1/registrarVenta", venta)
+      .then((res) => {
+        this.setState({
+          status: "success",
+          respuesta: res.data,
+        });
+      });
+    window.location.reload(false);
+  };
+
   render() {
+    if (this.state.status === "success") {
+      alert(this.state.respuesta);
+    }
     return (
       <div className="contentVentas-main">
-        <div className="contentVentas-1">
-          <span>Cedula: </span>
-          <input
-            type="text"
-            value={this.state.id}
-            onChange={this.actualizarEstado}
-            ref={this.txtCedula}
-          />
-          <input type="button" value="consultar" onClick={this.getClientes} />
-          <span>Cliente: </span>
-          <input
-            type="text"
-            value={this.state.clientes.nombrescliente}
-            ref={this.txtCliente}
-            disabled
-          />
-          <span>Consec: </span>
-          <input
-            type="text"
-            value={this.state.clientes.id}
-            ref={this.txtConsecutivo}
-            disabled
-          />
-        </div>
-        <div className="contentVentas-2">
-          <h2>Cod. Producto</h2>
-          <h2>Nombre Producto</h2>
-          <h2>Cantidad</h2>
-          <h2>Valor Total</h2>
-        </div>
-        <div className="contentVentas-3">
-          <div className="subContentVentas-3">
-            <div className="sectionConstentVentas-3">
+        <div class="form-group">
+          <form>
+            <div className="contentVentas-1">
+              <span>Cedula: </span>
               <input
                 type="text"
-                value={this.state.pro1}
-                onChange={this.actualizarProducto}
-                ref={this.txtCodProd1}
-                id="1"
+                value={this.state.id}
+                onChange={this.actualizarEstado}
+                ref={this.txtCedula}
+                class="form-control"
               />
               <input
                 type="button"
                 value="consultar"
-                onClick={this.getProductos}
+                onClick={this.getClientes}
               />
-            </div>
-            <div className="sectionConstentVentas-3">
+              <span>Cliente: </span>
               <input
                 type="text"
-                value={this.state.pro2}
-                onChange={this.actualizarProducto2}
-                ref={this.txtCodProd2}
+                value={this.state.clientes.nombrescliente}
+                ref={this.txtCliente}
+                disabled
               />
-              <input
-                type="button"
-                value="consultar"
-                onClick={this.getProductos2}
-              />
-            </div>
-            <div className="sectionConstentVentas-3">
+              <span>Consec: </span>
               <input
                 type="text"
-                value={this.state.pro3}
-                onChange={this.actualizarProducto3}
-                ref={this.txtCodProd3}
-              />
-              <input
-                type="button"
-                value="consultar"
-                onClick={this.getProductos3}
+                value={this.state.clientes.id}
+                ref={this.txtConsecutivo}
+                disabled
               />
             </div>
-          </div>
-          <div className="subContentVentas-3">
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={this.state.productos.nombre_producto}
-                ref={this.txtNombrePro1}
-              />
+            <div className="contentVentas-2">
+              <h2>Cod. Producto</h2>
+              <h2>Nombre Producto</h2>
+              <h2>Cantidad</h2>
+              <h2>Valor Total</h2>
             </div>
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={this.state.productos2.nombre_producto}
-                ref={this.txtNombrePro1}
-              />
+            <div className="contentVentas-3">
+              <div className="subContentVentas-3">
+                <div className="sectionConstentVentas-3">
+                  <input
+                    type="text"
+                    value={this.state.pro1}
+                    onChange={this.actualizarProducto}
+                    ref={this.txtCodProd1}
+                    id="1"
+                  />
+                  <input
+                    type="button"
+                    value="consultar"
+                    onClick={this.getProductos}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3">
+                  <input
+                    type="text"
+                    value={this.state.pro2}
+                    onChange={this.actualizarProducto2}
+                    ref={this.txtCodProd2}
+                  />
+                  <input
+                    type="button"
+                    value="consultar"
+                    onClick={this.getProductos2}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3">
+                  <input
+                    type="text"
+                    value={this.state.pro3}
+                    onChange={this.actualizarProducto3}
+                    ref={this.txtCodProd3}
+                  />
+                  <input
+                    type="button"
+                    value="consultar"
+                    onClick={this.getProductos3}
+                  />
+                </div>
+              </div>
+              <div className="subContentVentas-3">
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={this.state.productos.nombre_producto}
+                    ref={this.txtNombrePro1}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={this.state.productos2.nombre_producto}
+                    ref={this.txtNombrePro1}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={this.state.productos3.nombre_producto}
+                    ref={this.txtNombrePro1}
+                  />
+                </div>
+              </div>
+              <div className="subContentVentas-3">
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={this.state.cantidad1}
+                    onChange={this.actualizarcantidad1}
+                    ref={this.txtCantidad1}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={this.state.cantidad2}
+                    onChange={this.actualizarcantidad2}
+                    ref={this.txtCantidad2}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={this.state.cantidad3}
+                    onChange={this.actualizarcantidad3}
+                    ref={this.txtCantidad3}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <span>Total venta</span>
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <span>Total IVA</span>
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <span>Total con IVA</span>
+                </div>
+              </div>
+              <div className="subContentVentas-3">
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={
+                      this.state.cantidad1 * this.state.productos.precio_venta
+                    }
+                    ref={this.txtValorTotal1}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={
+                      this.state.cantidad2 * this.state.productos2.precio_venta
+                    }
+                    ref={this.txtValorTotal2}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={
+                      this.state.cantidad3 * this.state.productos3.precio_venta
+                    }
+                    ref={this.txtValorTotal3}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={
+                      this.state.cantidad1 * this.state.productos.precio_venta +
+                      this.state.cantidad2 *
+                        this.state.productos2.precio_venta +
+                      this.state.cantidad3 * this.state.productos3.precio_venta
+                    }
+                    ref={this.txtTotalVenta}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={
+                      (this.state.cantidad1 *
+                        this.state.productos.precio_venta +
+                        this.state.cantidad2 *
+                          this.state.productos2.precio_venta +
+                        this.state.cantidad3 *
+                          this.state.productos3.precio_venta) *
+                      0.19
+                    }
+                    ref={this.txtTotalIva}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="text"
+                    value={
+                      (this.state.cantidad1 *
+                        this.state.productos.precio_venta +
+                        this.state.cantidad2 *
+                          this.state.productos2.precio_venta +
+                        this.state.cantidad3 *
+                          this.state.productos3.precio_venta) *
+                      1.19
+                    }
+                    ref={this.txtTotalConIva}
+                  />
+                </div>
+                <div className="sectionConstentVentas-3-1">
+                  <input
+                    type="button"
+                    value="Registrar"
+                    onClick={this.guardarVenta}
+                  />
+                </div>
+              </div>
             </div>
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={this.state.productos3.nombre_producto}
-                ref={this.txtNombrePro1}
-              />
-            </div>
-          </div>
-          <div className="subContentVentas-3">
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={this.state.cantidad1}
-                onChange={this.actualizarcantidad1}
-                ref={this.txtCantidad1}
-              />
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={this.state.cantidad2}
-                onChange={this.actualizarcantidad2}
-                ref={this.txtCantidad2}
-              />
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={this.state.cantidad3}
-                onChange={this.actualizarcantidad3}
-                ref={this.txtCantidad3}
-              />
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <span>Total venta</span>
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <span>Total IVA</span>
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <span>Total con IVA</span>
-            </div>
-          </div>
-          <div className="subContentVentas-3">
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={this.state.cantidad1 * this.state.productos.precio_venta}
-                ref={this.txtValorTotal1}
-              />
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={
-                  this.state.cantidad2 * this.state.productos2.precio_venta
-                }
-                ref={this.txtValorTotal2}
-              />
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={
-                  this.state.cantidad3 * this.state.productos3.precio_venta
-                }
-                ref={this.txtValorTotal3}
-              />
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={
-                  this.state.cantidad1 * this.state.productos.precio_venta +
-                  this.state.cantidad2 * this.state.productos2.precio_venta +
-                  this.state.cantidad3 * this.state.productos3.precio_venta
-                }
-                ref={this.txtTotalVenta}
-              />
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={
-                  (this.state.cantidad1 * this.state.productos.precio_venta +
-                    this.state.cantidad2 * this.state.productos2.precio_venta +
-                    this.state.cantidad3 * this.state.productos3.precio_venta) *
-                  0.19
-                }
-                ref={this.txtTotalIva}
-              />
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <input
-                type="text"
-                value={
-                  (this.state.cantidad1 * this.state.productos.precio_venta +
-                    this.state.cantidad2 * this.state.productos2.precio_venta +
-                    this.state.cantidad3 * this.state.productos3.precio_venta) *
-                  1.19
-                }
-                ref={this.txtTotalConIva}
-              />
-            </div>
-            <div className="sectionConstentVentas-3-1">
-              <input type="submit" value="Registrar" />
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     );
