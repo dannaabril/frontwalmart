@@ -61,7 +61,7 @@ class EditarUsuario extends Component{
         
             render(){
                 if(this.state.status === "success"){
-                    return <Navigate to ="/usuario" />
+                    return <Navigate to ="/Usuarios" />
             }
             
             return(
