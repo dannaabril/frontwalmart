@@ -42,13 +42,18 @@ class Productos extends Component{
     }
     render(){
         return(
-            <div>
-                <h1>Productos</h1>
-                <div>
-                <Link to ="/AgregarProducto"> Crear Producto </Link>
+            <div class="principal">
+                <div class="encabezado">
+                    <h1>Modulo de Productos</h1>
                 </div>
-                <div >
-                <table class="AnchoTabla table table-secondary table-striped">
+
+                <div class="encabezado">
+                    <Link class="btngeneral" to ="/AgregarProducto"> 
+                        Crear Producto 
+                    </Link>
+                </div>
+                
+                <table class="tablag">
                     <thead>
                         <tr>
                             <th>Codigo Del Producto</th>
@@ -66,28 +71,36 @@ class Productos extends Component{
                                return(
                                    <React.Fragment>
                                        <tr>
-                                        <td>{productos.codigoProducto}</td>
-                                        <td>{productos.nombre_producto}</td>
-                                        <td>{productos.nit_proveedor}</td>
-                                        <td>${productos.precio_compra}</td>
-                                        <td>{productos.iva_compra}%</td>
-                                        <td>${productos.precio_venta}</td>
+                                        <td><center>{productos.codigoProducto}</center></td>
+                                        <td><center>{productos.nombre_producto}</center></td>
+                                        <td><center>{productos.nit_proveedor}</center></td>
+                                        <td><center>${productos.precio_compra}</center></td>
+                                        <td><center>{productos.iva_compra}%</center></td>
+                                        <td><center>${productos.precio_venta}</center></td>
                                         <td>
-                                        <Link class="btnMultiple" to = {"/EditarProducto/"+productos.codigoProducto}>Editar</Link>
-                                            <button onClick ={
-                                                ()=>{
-                                                    this.borrarProducto(productos.codigoProducto)
-                                                }
-                                            }>Eliminar</button>
+                                            <center>
+                                                <Link
+                                                    class="btnMultiple1"
+                                                    to={"/EditarProducto/" + productos.codigoProducto}
+                                                >
+                                                    Editar
+                                                </Link>
+                                                <button
+                                                    class="btnMultiple2"
+                                                    onClick={() => {
+                                                        this.borrarProducto(productos.codigoProducto);
+                                                    }}
+                                                >
+                                                    Eliminar
+                                                </button>
+                                            </center>
                                         </td>
-                                       </tr>
-                                   </React.Fragment>
-                               )
-                           }) 
-                        }
+                                    </tr>
+                                </React.Fragment>
+                            );
+                        })}
                     </tbody>
                 </table>
-                </div>
             </div>
         );
     }

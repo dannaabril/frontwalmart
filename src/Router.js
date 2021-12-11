@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
@@ -37,7 +37,7 @@ class Router extends Component {
                   {" "}
                   <NavLink to="/Productos" activeClassName="active">
                     {" "}
-                    Clientes{" "}
+                    Productos{" "}
                   </NavLink>
                 </li>
                 <li>
@@ -51,7 +51,7 @@ class Router extends Component {
                   {" "}
                   <NavLink to="/Clientes" activeClassName="active">
                     {" "}
-                    Productos{" "}
+                    Cientes{" "}
                   </NavLink>
                 </li>
                 <li>

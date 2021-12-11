@@ -65,27 +65,29 @@ class Proveedores extends Component {
               return (
                 <React.Fragment>
                   <tr>
-                    <td>{proveedores.id}</td>
-                    <td>{proveedores.nombredelproveedor}</td>
-                    <td>{proveedores.direccion}</td>
-                    <td>{proveedores.ciudad}</td>
-                    <td>{proveedores.telefono}</td>
-                    <td>{proveedores.email}</td>
+                    <td><center>{proveedores.id}</center></td>
+                    <td><center>{proveedores.nombredelproveedor}</center></td>
+                    <td><center>{proveedores.direccion}</center></td>
+                    <td><center>{proveedores.ciudad}</center></td>
+                    <td><center>{proveedores.telefono}</center></td>
+                    <td><center>{proveedores.email}</center></td>
                     <td>
-                      <Link
-                        class="btnMultiple1"
-                        to={"/EditarProveedor/" + proveedores.id}
-                      >
-                        Editar
-                      </Link>
-                      <button
-                        class="btnMultiple2"
-                        onClick={() => {
-                          this.borrarProveedor(proveedores.id);
-                        }}
-                      >
-                        Eliminar
-                      </button>
+                      <center>
+                        <Link
+                          class="btnMultiple1"
+                          to={"/EditarProveedor/" + proveedores.id}
+                        >
+                          Editar
+                        </Link>
+                        <button
+                          class="btnMultiple2"
+                         onClick={() => {
+                           this.borrarProveedor(proveedores.id);
+                         }}
+                       >
+                         Eliminar
+                        </button>
+                      </center>
                     </td>
                   </tr>
                 </React.Fragment>
